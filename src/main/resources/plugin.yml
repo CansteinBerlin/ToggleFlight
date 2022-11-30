@@ -1,0 +1,10 @@
+name: ToggleFlight
+version: '${project.version}'
+main: me.hasenzahn1.toggleflight.ToggleFlight
+api-version: 1.19
+authors: [ Hasenzahn1 ]
+description: Add a command to toggle the flight ability of other players
+
+commands:
+  toggleFlight:
+    description: Toggle the flight of other players
