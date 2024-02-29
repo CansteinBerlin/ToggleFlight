@@ -1,5 +1,6 @@
 prefix: "[ToggleFlight] "
 
+hasToBePlayer: "&cYou have to be a player to use this command"
 noPlayer: "&cUnknown player with name %player%"
 noPermission: "&cYou don't have permission to use this command"
 invalidCommand: "&cInvalid Command. Please use &6/%command% <player>"
