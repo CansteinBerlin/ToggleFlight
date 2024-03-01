@@ -38,9 +38,14 @@ public class ToggleFlightCommand implements CommandExecutor {
             ToggleFlight.INSTANCE.getEnabledPlayers().add(applicator.getUniqueId());
         }
 
-        sender.sendMessage(ToggleFlight.PREFIX + ToggleFlight.getLang("success", "player", applicator.getDisplayName(), "state",
-                ToggleFlight.getLang(ToggleFlight.INSTANCE.getEnabledPlayers().contains(applicator.getUniqueId()) ? "enabled" : "disabled")));
+        if(applicator.getUniqueId().equals(((Player) sender).getUniqueId())){
+            sender.sendMessage(ToggleFlight.PREFIX + ToggleFlight.getLang("successSelf", "state",
+                    ToggleFlight.getLang(ToggleFlight.INSTANCE.getEnabledPlayers().contains(applicator.getUniqueId()) ? "enabled" : "disabled")));
 
+        }else {
+            sender.sendMessage(ToggleFlight.PREFIX + ToggleFlight.getLang("successOther", "player", applicator.getDisplayName(), "state",
+                    ToggleFlight.getLang(ToggleFlight.INSTANCE.getEnabledPlayers().contains(applicator.getUniqueId()) ? "enabled" : "disabled")));
+        }
         return true;
     }
 }
